@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "UserClient", url = "${auth-service.url}")
+@FeignClient(value = "UserClient", url = "${auth-service.url}/api")
 public interface UserClient {
 
     @GetMapping("/users/exist-by-user-id")
